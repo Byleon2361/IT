@@ -1,0 +1,17 @@
+body {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 5em ;
+    padding-right: 2em;
+    background: #BBBBBB;
+}
+.Task3 p {
+    background-color: white;
+    border-right: thick double blue;
+    text-indent: 20px; /*Табуляция*/
+}
+.Task3 h3 {
+    font-family: Arial;
+    color:blue;
+    font-size:20pt;
+}
