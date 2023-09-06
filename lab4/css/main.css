@@ -4,19 +4,32 @@ body {
     padding-left: 5em;
     padding-right: 2em;
     background: #BBBBBB;
+    font-family: Arial;
 }
 
-.Task3 p {
+p {
     background-color: white;
-    border-right: thick double blue;
     text-indent: 20px;
     padding-left: 5%;
     padding-right: 5%;
     line-height: 35px;
 }
 
-.Task3 h3 {
-    font-family: Arial;
+.Red p {
+    border-left: thick solid red;
+}
+
+.Red h3 {
     color: blue;
+    font-size: 20pt;
+}
+
+.Blue p {
+    border-right: thick double blue;
+}
+
+.Blue h3 {
+    color: yellow;
+    background-color: green;
     font-size: 20pt;
 }
