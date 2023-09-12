@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 3.2//RU">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Лабораторная 2.1</title>
+</head>
+<script language="JavaScript">
+    function swap() {
+        var temp = new Image();
+        temp.src = second.src;
+        second.src = first.src;
+        first.src = temp.src;
+    }
+</script>
+
+<body>
+    <img name="first" src="up.gif">
+    <img name="second" src="home.gif">
+    <br><button onclick="swap()">Обмен</button>
+</body>
+
+</html>
