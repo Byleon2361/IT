@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 3.2//RU">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Лабораторная 2.1</title>
+</head>
+<script language="JavaScript">
+    var i = 1;
+    var delay = 500;
+    var myTimer;
+    var isTimerRunning = false;
+    function myAnimate() {
+        if (i == 12) {
+            i = 1;
+        }
+        i++;
+        animation.src = 'animationSrc/s' + i + '.gif';
+        isTimerRunning = false;
+    }
+    function Start() {
+        if (isTimerRunning == false) {
+            isTimerRunning = true;
+            myTimer = setTimeout('myAnimate()', delay);
+        }
+    }
+    function Stop() {
+        isTimerRunning = false;
+        clearTimeout(myTimer);
+    }
+    function Faster() {
+        if (delay > 100) {
+            delay -= 100;
+            console.log(delay);
+        }
+    }
+    function Slower() {
+        if (delay < 1000) {
+
+            delay += 100;
+            console.log(delay);
+        }
+    }
+</script>
+
+<body>
+    <img name="animation" src="animationSrc/s1.gif" onLoad="Start()">
+    <br>
+    <button onclick="Start()">Старт</button>
+    <button onclick="Stop()">Стоп</button>
+    <button onclick="Faster()">Быстрее</button>
+    <button onclick="Slower()">Медленнее</button>
+</body>
+
+</html>
