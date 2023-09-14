@@ -4,44 +4,44 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Лабораторная 2.1</title>
-</head>
-<script language="JavaScript">
-    var i = 1;
-    var delay = 500;
-    var myTimer;
-    var isTimerRunning = false;
-    function myAnimate() {
-        if (i == 12) {
-            i = 1;
+    <script language="JavaScript">
+        let i = 1;
+        let delay = 500;
+        let myTimer;
+        let isTimerRunning = false;
+        function myAnimate() {
+            if (i == 12) {
+                i = 1;
+            }
+            i++;
+            animation.src = 'animationSrc/s' + i + '.gif';
+            isTimerRunning = false;
         }
-        i++;
-        animation.src = 'animationSrc/s' + i + '.gif';
-        isTimerRunning = false;
-    }
-    function Start() {
-        if (isTimerRunning == false) {
-            isTimerRunning = true;
-            myTimer = setTimeout('myAnimate()', delay);
+        function Start() {
+            if (isTimerRunning == false) {
+                isTimerRunning = true;
+                myTimer = setTimeout('myAnimate()', delay);
+            }
         }
-    }
-    function Stop() {
-        isTimerRunning = false;
-        clearTimeout(myTimer);
-    }
-    function Faster() {
-        if (delay > 100) {
-            delay -= 100;
-            console.log(delay);
+        function Stop() {
+            isTimerRunning = false;
+            clearTimeout(myTimer);
         }
-    }
-    function Slower() {
-        if (delay < 1000) {
+        function Faster() {
+            if (delay > 100) {
+                delay -= 100;
+                console.log(delay);
+            }
+        }
+        function Slower() {
+            if (delay < 1000) {
 
-            delay += 100;
-            console.log(delay);
+                delay += 100;
+                console.log(delay);
+            }
         }
-    }
-</script>
+    </script>
+</head>
 
 <body>
     <img name="animation" src="animationSrc/s1.gif" onLoad="Start()">
